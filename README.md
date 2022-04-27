@@ -196,13 +196,21 @@
 
 - Запустить построенный докер
 
+![print_step_1](instruction/1.PNG)
+
 - Запустить CLI консоль
+
+![print_step_2](instruction/2.PNG)
 
 - Запустить тестовый скрипт
 
     ```console
     cd home && python3 RunCheckerTest.py
     ```
+
+    ![print_step_3](instruction/3.PNG)
+    
+    ![print_step_4](instruction/4.PNG)
 
     - Если тест запустится удачно, то будет создана папка samples_testing_2 в output/AttGAN_128
                 
