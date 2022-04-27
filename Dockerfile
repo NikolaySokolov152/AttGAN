@@ -28,4 +28,5 @@ ENV PYTHONIOENCODING=utf-8
 
 COPY . /home
 
-CMD bash
+WORKDIR "/home"
+CMD ["python3", "RunCheckerTest.py"]
