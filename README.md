@@ -187,13 +187,13 @@
 - Скачать и распаковать обученные веса [AttGAN_128_generator_only.zip](https://drive.google.com/file/d/1lcQ-ijNrGD4919eJ5Dv-7ja5rsx5p0Tp/view?usp=sharing) (161.5MB) в папку output (если её нет, то создать)
 
 - Создать docker image 
-        
+
         ```console
         docker build -t att_gan_docker .
         ```
 
     - после этого запустится процесс сборки, в конце которого репозиторий будет скопирован в докер
-    
+
 - Запустить построенный докер
 
 - Запустить CLI консоль
@@ -203,7 +203,7 @@
         ```console
         cd home && python3 RunCheckerTest.py
         ```
-        
+
     - Если тест запустится удачно, то будет создана папка samples_testing_2 в output/AttGAN_128
                 
           - Печать имен полученных картинок
@@ -211,13 +211,15 @@
                 ```console
                 cd output/AttGAN_128/samples_testing_2 && ls
                 ```
-        
+
 #### Возможные проблемы
 
 - основной тестирующий скрипт RunCheckerTest.py выполняет системный вызов test.py 
+
             ```console
             32 os.system('python3 test.py --experiment_name AttGAN_128')
             ```
+
       - если python3 не найден или его вызов пишет в консоль Python3, то заменить на python
-      
+
 - если качество пользовательских изображений является плохим, то это нормально, так как изображения нужно выравнивать специальной процедурой, о которой авторы кода не уточняли
