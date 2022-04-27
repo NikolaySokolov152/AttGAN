@@ -206,11 +206,11 @@
 
     - Если тест запустится удачно, то будет создана папка samples_testing_2 в output/AttGAN_128
                 
-          - Печать имен полученных картинок
+        - Печать имен полученных картинок
 
-              ```console
-              cd output/AttGAN_128/samples_testing_2 && ls
-              ```
+            ```console
+            cd output/AttGAN_128/samples_testing_2 && ls
+            ```
 
 #### Возможные проблемы
 
