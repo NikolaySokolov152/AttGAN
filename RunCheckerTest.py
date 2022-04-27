@@ -1,5 +1,6 @@
 import os
 import sys
+import cv2
 
 try:
     if not os.path.isdir("output"):
@@ -46,6 +47,22 @@ try:
     num_create = len(os.listdir("output/AttGAN_128/samples_testing_2"))
     if num_create != 0:
         print("Запуск прошёл удачно. В директории 'output/AttGAN_128/samples_testing_2' лежит", num_create, " сгенерированных изображения")
+        
+        dir_check = 'check_result'
+        dir_result = 'output/AttGAN_128/samples_testing_2'
+        
+        for name in os.listdir(dir_result):
+            img_check = cv2.imread(os.path.join(dir_check, name))
+            img_result = cv2.imread(os.path.join(dir_result, name))
+           
+            img_check = img_check.astype(float)
+            img_result = img_result.astype(float)
+                    
+            err = (abs(img_check[:,:,:] - img_result[:,:,:])).sum()
+        
+            print ("ошибка с", name, "составляет", err)
+        
+        
     else:
         print("Запуск прошёл неудачно")
         
