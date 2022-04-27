@@ -198,7 +198,7 @@
         docker run att_gan_docker
         ```
 
-- Запустить построенный докер
+- Запустить построенный докер можно и через API docker
 
 ![print_step_1](instruction/1.PNG)
 
