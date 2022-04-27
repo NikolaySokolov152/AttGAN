@@ -10,6 +10,7 @@ USER root
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update -y && apt-get install -y --no-install-recommends python3.6 python3-dev && apt-get clean
+RUN apt-get install ffmpeg libsm6 libxext6 -y
 RUN apt-get install -y python3-pip
 RUN pip3 install --upgrade pip
 
